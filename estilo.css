@@ -1,0 +1,297 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Definición de la animación */
+@keyframes animatedBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes animateName {
+    0% { transform: scale(1.2); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1.2); }
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+/* Aplicación de la animación al fondo del cuerpo */
+body {
+    background-image: linear-gradient(-70deg,#070141,#0b004b,#080055,rgb(10, 10, 95));
+    background-size: 400% 400%;
+    animation: animatedBackground 10s ease infinite;
+}
+
+
+.name{
+    display: inline-block;
+    color: rgb(0, 132, 255);
+    margin-right: 10px;
+    animation: bounce 2s infinite;
+}
+.name2{
+    display: inline-block;
+    color: rgb(89, 0, 255);
+    margin-left: 10px;
+    animation: bounce 2s infinite;
+}
+.curriculum{
+    margin-top: 20px;
+    border: 1px solid #070141;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#493acf,#332991,#2d247e);
+    text-decoration: none;
+    color: rgb(0, 195, 255);
+    margin-top: 80px;
+    animation: animateName 2s infinite; /* 2 segundos, animación infinita */
+}
+.curriculum:hover{
+    padding: 12px;
+    background: linear-gradient(90deg,#2d247e,#332991,#493acf);
+}
+.div-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    font-size: 35px;
+} 
+.div-meTexto{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: rgb(42, 158, 158);
+}
+.div-curriculum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meCompleto{
+    height: 530px;
+}
+.conteiner{
+    padding: 20px 300px 20px 300px;
+    opacity: 1;
+}
+
+
+
+.slider{
+    overflow: hidden;
+    padding: 25px;
+    background: transparent;
+    white-space: nowrap;
+}
+.slider:hover .slider-inner{
+    animation-play-state: paused;
+}
+.slider-inner{
+    display: inline-block;
+    animation: 5s slide infinite linear;
+}
+.imagenes{
+    height: 100px;
+    width: 120px;
+    margin: 0 10px;
+}
+
+.nav-conteiner{
+    text-align: center;
+    padding-top: 5px;
+    height: 25px;
+    border-bottom: 1px solid #493acf;
+}
+.nav-conteiner a{
+    text-decoration: none;
+    padding: 8px;
+    color: rgba(112, 179, 255, 0.747);
+    font-size: 22px;
+}
+
+.nav-conteiner a:hover{
+    color: rgb(97, 155, 230);
+}
+
+.div-all{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+#ab{
+    height: 420px;
+}
+#ex{
+    height: 300px;
+}
+
+.title{
+    margin-bottom: 25px;
+    padding-left: 10px;
+    font-size: 30px;
+    color: rgb(62, 158, 247);
+    border-top: 1px solid #493acf;
+    animation: fadeInOut 1s infinite;
+}
+.textoMe{
+    font-size: 22px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(85, 85, 224);
+}
+.textoMe2{
+    font-size: 28px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(109, 167, 243);
+}
+
+
+.habilidad{
+    font-size: 20px;
+    padding-top: 10px;
+    color: rgb(85, 85, 224);
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.contactos{
+    font-size: 20px;
+    padding-top: 15px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.proyecto{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    background: rgba(68, 79, 230, 0.164);
+    width: 400px;
+    padding: 10px 10px 20px 10px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+}
+.proyecto p{
+    color: rgb(39, 173, 214);
+}
+.imgP{
+    width: 400px;
+}
+.git{
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #1c1263;
+    display: flex;
+    justify-content: center;
+    padding: 2px 10px 2px 10px;
+    background: #1c1263;
+}
+
+@media screen and (max-width:700px){
+    .div-me{
+        font-size: 20px;
+    }
+    .div-me{
+        margin: 0;
+        margin-top: 100px;
+    }
+    #ab{
+        height: 100%;
+    }
+    .div-meTexto{
+        text-align: center;
+    }
+    .conteiner{
+        padding: 0;
+    }
+    .nav-conteiner a{
+        font-size: 13px;
+    }
+    .presentacion{
+        float: none;
+        margin: 5px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .foto{
+        margin: auto;
+        margin-top: 40px;
+        float: none;
+        display: flex;
+        align-items: center;
+    }
+    .contenP{
+        display: block;
+        width: 300px;
+        margin-left: 5%;
+    }
+    .proyecto{
+        max-width: 100%;
+    }
+    .imgP{
+        max-width: 300px;
+    }
+}
+@media screen and (min-width:700px) and (max-width:1590px){
+    .conteiner{
+        padding: 0;
+    }
+    .nav-conteiner{
+        font-size: 12px;
+    }
+    .presentacion{
+        margin: 5px;
+        margin-left: 20%;
+        margin-top: 20px;
+        width: 60%;
+        float: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+    .foto{
+        float: none;
+        margin: auto;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .nav-conteiner{
+        font-size: 20px;
+    }
+    #ab{
+        height: 100%;
+    }
+}
